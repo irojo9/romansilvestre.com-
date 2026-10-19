@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Román Silvestre · Quiromasajista Deportivo y Osteópata</title>
+  <meta name="description" content="Román Silvestre, quiromasajista deportivo y osteópata en Sant Vicent del Raspeig (Alicante). Masaje deportivo, descarga muscular, recuperación de lesiones y osteopatía.">
+  <meta name="theme-color" content="#05070c">
+  <meta property="og:title" content="Román Silvestre · Quiromasajista Deportivo y Osteópata">
+  <meta property="og:description" content="Recupera, rinde y vuelve más fuerte. Masaje deportivo y osteopatía en Sant Vicent del Raspeig.">
+  <meta property="og:image" content="assets/logo.jpg">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="is-loading">
+
+  <!-- ============ INTRO ============ -->
+  <div class="intro" id="intro" aria-hidden="true">
+    <div class="intro__flash"></div>
+    <svg class="intro__logo" viewBox="0 0 400 400">
+      <defs>
+        <linearGradient id="gBlue" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#29b6f6"/>
+          <stop offset=".6" stop-color="#0ea5e9"/>
+          <stop offset="1" stop-color="#2b3fc7"/>
+        </linearGradient>
+        <linearGradient id="gGrey" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#3a3d42"/>
+          <stop offset="1" stop-color="#b5b8bd"/>
+        </linearGradient>
+        <linearGradient id="gText" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#22b4f2"/>
+          <stop offset="1" stop-color="#2563eb"/>
+        </linearGradient>
+        <clipPath id="clipTop"><path d="M0 0H400V214C340 196 300 236 240 222S150 196 90 226L0 226Z"/></clipPath>
+        <clipPath id="clipBot"><path d="M0 400H400V214C340 196 300 236 240 222S150 196 90 226L0 226Z"/></clipPath>
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="6" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+      <!-- outer blue ring -->
+      <circle class="i-ring" pathLength="1" cx="200" cy="200" r="150" fill="none" stroke="url(#gBlue)" stroke-width="16" filter="url(#glow)"/>
+      <!-- grey crescent -->
+      <path class="i-cres" pathLength="1" d="M243 92 A118 118 0 1 1 104 262" fill="none" stroke="url(#gGrey)" stroke-width="20" stroke-linecap="round"/>
+      <!-- letters -->
+      <g class="i-letters">
+        <text class="i-rs i-rs--top" x="196" y="232" text-anchor="middle" clip-path="url(#clipTop)">RS</text>
+        <text class="i-rs i-rs--bot" x="196" y="232" text-anchor="middle" clip-path="url(#clipBot)">RS</text>
+      </g>
+      <!-- waves -->
+      <path class="i-wave i-wave--blue" pathLength="1" d="M92 238C150 196 190 200 240 220S330 230 312 210" fill="none" stroke="#1ea7ee" stroke-width="9" stroke-linecap="round"/>
+      <path class="i-wave i-wave--white" pathLength="1" d="M98 250C150 214 190 220 240 236S320 240 306 226" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+    <div class="intro__name">
+      <span>Román</span><span>Silvestre</span>
+    </div>
+    <div class="intro__tag">Quiromasaje deportivo · Osteopatía</div>
+    <button class="intro__skip" id="introSkip" type="button">Saltar</button>
+  </div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a href="#inicio" class="nav__brand">
+      <img src="assets/logo.png" alt="" width="40" height="40">
+      <span>Román<b>Silvestre</b></span>
+    </a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#servicios">Servicios</a>
+      <a href="#metodo">Método</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#contacto" class="btn btn--sm">Pide cita</a>
+    </nav>
+    <button class="nav__burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="inicio">
+      <canvas class="hero__canvas" id="heroCanvas"></canvas>
+      <div class="hero__glow"></div>
+      <div class="hero__inner">
+        <p class="eyebrow reveal">Sant Vicent del Raspeig · Alicante</p>
+        <h1 class="hero__title">
+          <span class="line"><span>Recupera.</span></span>
+          <span class="line"><span class="stroke">Rinde.</span></span>
+          <span class="line"><span class="blue">Vuelve más fuerte.</span></span>
+        </h1>
+        <p class="hero__lead reveal">Quiromasaje deportivo y osteopatía para deportistas y para cualquier cuerpo que necesite volver a moverse sin dolor.</p>
+        <div class="hero__cta reveal">
+          <a href="#contacto" class="btn">Reserva tu sesión</a>
+          <a href="#servicios" class="btn btn--ghost">Ver tratamientos</a>
+        </div>
+      </div>
+      <img class="hero__mark" src="assets/logo.png" alt="" aria-hidden="true">
+      <a href="#marquee" class="hero__scroll" aria-label="Bajar"><span></span></a>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" id="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Masaje deportivo</span><i></i><span>Descarga muscular</span><i></i><span>Osteopatía</span><i></i><span>Recuperación de lesiones</span><i></i><span>Pre-competición</span><i></i><span>Post-competición</span><i></i>
+        <span>Masaje deportivo</span><i></i><span>Descarga muscular</span><i></i><span>Osteopatía</span><i></i><span>Recuperación de lesiones</span><i></i><span>Pre-competición</span><i></i><span>Post-competición</span><i></i>
+      </div>
+    </div>
+
+    <!-- ============ STATS ============ -->
+    <section class="stats">
+      <div class="stat reveal"><strong data-count="5" data-decimals="1">0</strong><span>Valoración media en Treatwell</span></div>
+      <div class="stat reveal"><strong>1:1</strong><span>Atención individual en cada sesión</span></div>
+      <div class="stat reveal"><strong>2</strong><span>Disciplinas: quiromasaje y osteopatía</span></div>
+      <div class="stat reveal"><strong>100%</strong><span>Plan adaptado a tu deporte</span></div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="section" id="servicios">
+      <header class="section__head">
+        <p class="eyebrow reveal">Tratamientos</p>
+        <h2 class="section__title reveal">Manos expertas para<br><span class="blue">cada fase</span> de tu entrenamiento</h2>
+      </header>
+      <div class="cards">
+        <article class="card reveal" data-tilt>
+          <div class="card__num">01</div>
+          <svg class="card__icon" viewBox="0 0 48 48"><path d="M8 34c6-10 14-14 22-12s10 8 10 8M14 40c4-6 10-9 16-8" /><circle cx="30" cy="12" r="5"/></svg>
+          <h3>Masaje deportivo</h3>
+          <p>Trabajo profundo sobre la musculatura implicada en tu disciplina para mejorar elasticidad, circulación y rendimiento.</p>
+        </article>
+        <article class="card reveal" data-tilt>
+          <div class="card__num">02</div>
+          <svg class="card__icon" viewBox="0 0 48 48"><path d="M6 24h8l4-10 6 20 5-14 3 4h10"/></svg>
+          <h3>Descarga muscular</h3>
+          <p>Libera la tensión y la fatiga acumuladas tras entrenos intensos, carreras o competiciones. Piernas nuevas.</p>
+        </article>
+        <article class="card reveal" data-tilt>
+          <div class="card__num">03</div>
+          <svg class="card__icon" viewBox="0 0 48 48"><path d="M24 6v36M18 10h12M16 17h16M17 24h14M18 31h12M20 38h8"/></svg>
+          <h3>Osteopatía</h3>
+          <p>Enfoque global sobre articulaciones, columna y tejidos para corregir disfunciones y aliviar el dolor de origen mecánico.</p>
+        </article>
+        <article class="card reveal" data-tilt>
+          <div class="card__num">04</div>
+          <svg class="card__icon" viewBox="0 0 48 48"><path d="M24 42s-15-9-15-21a8 8 0 0 1 15-4 8 8 0 0 1 15 4c0 12-15 21-15 21z"/><path d="M17 24h5l2-4 3 8 2-4h3"/></svg>
+          <h3>Recuperación de lesiones</h3>
+          <p>Contracturas, sobrecargas, tendinopatías, esguinces… Acompañamiento para volver a entrenar con seguridad.</p>
+        </article>
+        <article class="card reveal" data-tilt>
+          <div class="card__num">05</div>
+          <svg class="card__icon" viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><path d="M24 13v11l7 5"/></svg>
+          <h3>Pre y post competición</h3>
+          <p>Activación antes de la prueba y recuperación después. Llega a la salida preparado y sal de la meta sin castigo.</p>
+        </article>
+        <article class="card reveal" data-tilt>
+          <div class="card__num">06</div>
+          <svg class="card__icon" viewBox="0 0 48 48"><path d="M10 38V22M20 38V14M30 38V26M40 38V10"/></svg>
+          <h3>Plan personalizado</h3>
+          <p>Valoración inicial y un plan de sesiones ajustado a tu calendario deportivo, tus objetivos y tu cuerpo.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ METHOD ============ -->
+    <section class="method" id="metodo">
+      <div class="method__sticky">
+        <p class="eyebrow">El método</p>
+        <h2 class="section__title">Tres pasos.<br><span class="blue">Cero atajos.</span></h2>
+        <div class="method__ring" aria-hidden="true">
+          <svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="88" class="track"/><circle cx="100" cy="100" r="88" class="bar" id="methodBar" pathLength="1"/></svg>
+          <img src="assets/logo.png" alt="">
+        </div>
+      </div>
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step__n">01</span>
+          <h3>Valoración</h3>
+          <p>Escucho tu historia: deporte, volumen de entrenamiento, molestias y objetivos. Evalúo postura, movilidad y zonas de tensión.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__n">02</span>
+          <h3>Tratamiento</h3>
+          <p>Combino quiromasaje deportivo y técnicas osteopáticas según lo que tu cuerpo necesita ese día. Ni más, ni menos.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__n">03</span>
+          <h3>Seguimiento</h3>
+          <p>Pautas para casa, estiramientos y una planificación de sesiones alineada con tus carreras y competiciones.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about" id="sobre-mi">
+      <div class="about__visual reveal">
+        <div class="about__orb">
+          <img src="assets/logo.png" alt="Logotipo de Román Silvestre">
+        </div>
+      </div>
+      <div class="about__text">
+        <p class="eyebrow reveal">Sobre mí</p>
+        <h2 class="section__title reveal">Soy <span class="blue">Román Silvestre</span></h2>
+        <p class="reveal">Quiromasajista deportivo y osteópata en Sant Vicent del Raspeig. Mi trabajo es que puedas seguir haciendo lo que te gusta: correr, pedalear, nadar, levantar, jugar… o simplemente moverte sin dolor en tu día a día.</p>
+        <p class="reveal">Cada sesión es individual y empieza por entender tu caso. Nada de protocolos genéricos: trato a la persona, no solo a la lesión.</p>
+        <ul class="ticks reveal">
+          <li>Deportistas populares y de competición</li>
+          <li>Dolor de espalda, cuello y hombros</li>
+          <li>Sobrecargas y contracturas</li>
+          <li>Prevención y mantenimiento</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ QUOTE ============ -->
+    <section class="quote">
+      <p class="quote__text reveal">“El mejor entrenamiento es el que tu cuerpo puede <span class="blue">repetir mañana</span>.”</p>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contacto">
+      <div class="contact__card reveal">
+        <div>
+          <p class="eyebrow">Pide cita</p>
+          <h2 class="section__title">¿Listo para<br><span class="blue">sentirte nuevo?</span></h2>
+          <p class="contact__lead">Reserva online o escríbeme y buscamos el hueco que mejor te encaje.</p>
+          <div class="hero__cta">
+            <a class="btn" href="https://www.treatwell.es/establecimiento/roman-silvestre-quiromasajista-deportivo-y-osteopata/" target="_blank" rel="noopener">Reservar en Treatwell</a>
+            <!-- TODO: sustituir por el número real de WhatsApp (formato 34XXXXXXXXX) -->
+            <a class="btn btn--ghost" href="https://wa.me/34000000000" target="_blank" rel="noopener" id="waBtn">WhatsApp</a>
+          </div>
+        </div>
+        <ul class="contact__info">
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M12 22s7-6.4 7-12a7 7 0 0 0-14 0c0 5.6 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <div><b>Dirección</b><span>C/ Alicante, 28<br>03690 Sant Vicent del Raspeig, Alicante</span></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <div><b>Horario</b><span>Con cita previa</span></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg>
+            <div><b>Valoración</b><span>5,0 en Treatwell</span></div>
+          </li>
+        </ul>
+        <div class="contact__map">
+          <iframe title="Mapa de ubicación" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Calle+Alicante+28,+03690+San+Vicente+del+Raspeig&output=embed"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="assets/logo.png" alt="" width="56" height="56">
+    <p>© <span id="year"></span> Román Silvestre · Quiromasajista Deportivo y Osteópata</p>
+    <p class="footer__small">Sant Vicent del Raspeig · Alicante</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
